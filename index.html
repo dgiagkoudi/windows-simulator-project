@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Windows Simulator</title>
+    <link rel="icon" type="image/png" href="public/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="desktop" role="main" aria-label="Desktop Environment">
+        <button class="shortcut" onclick="openApp('My Computer', '💻 Drives: (C:) System [99% Full]')" aria-label="Open My Computer">
+            <div class="icon-img" aria-hidden="true">🖳</div>
+            <span class="icon-text">My Computer</span>
+        </button>
+        <button class="shortcut" onclick="openApp('My Documents', '📂 Access Denied: Files are shy today.')" aria-label="Open My Documents">
+            <div class="icon-img" aria-hidden="true">📁</div>
+            <span class="icon-text">My Documents</span>
+        </button>
+        <button class="shortcut" onclick="openApp('Recycle Bin', '🗑️ Empty. Just like my soul.')" aria-label="Open Recycle Bin">
+            <div class="icon-img" aria-hidden="true">🗑️</div>
+            <span class="icon-text">Recycle Bin</span>
+        </button>
+        <button class="shortcut" onclick="openApp('Network', '🏡 No neighbors found. You are alone.')" aria-label="Open Network Neighborhood">
+            <div class="icon-img" aria-hidden="true">🏡</div>
+            <span class="icon-text">Network Neighborhood</span>
+        </button>
+        <button class="shortcut" onclick="openApp('Internet Explorer', '🌍 Dialing 56k... Beeee-boooo-psshhh...')" aria-label="Open Internet Explorer">
+            <div class="icon-img" aria-hidden="true">🌍</div>
+            <span class="icon-text">Internet Explorer</span>
+        </button>
+        <button class="shortcut" onclick="openApp('Outlook Express', '✉️ You have 0 friends and 0 emails.')" aria-label="Open Outlook Express">
+            <div class="icon-img" aria-hidden="true">📧</div>
+            <span class="icon-text">Outlook Express</span>
+        </button>
+        <section class="main-content" role="alert" aria-labelledby="urgent-title">
+            <div class="win-header"><span id="urgent-title">System Alert</span></div>
+            <div class="win-body">
+                <h1>URGENT SYSTEM UPDATE</h1>
+                <p>Please click the button below to save your files.</p>
+                <button id="main-action-btn" aria-label="Fix system now and update">FIX SYSTEM NOW</button>
+            </div>
+        </section>
+        <nav id="start-menu" class="hidden" role="menu" aria-label="Start Menu">
+            <div class="start-sidebar" aria-hidden="true"><span>Windows 98</span></div>
+            <ul class="start-list">
+                <li role="menuitem" tabindex="0" onclick="openApp('Programs', '📁 No programs found.')"><span>📁</span> Programs</li>
+                <li role="menuitem" tabindex="0" onclick="openApp('Documents', '📂 Folder is locked.')"><span>📂</span> Documents</li>
+                <li role="menuitem" tabindex="0" onclick="openApp('Settings', '⚙️ Settings locked.')"><span>⚙️</span> Settings</li>
+                <hr>
+                <li role="menuitem" tabindex="0" onclick="location.reload()"><span>🚪</span> Shut Down...</li>
+            </ul>
+        </nav>
+        <footer class="taskbar">
+            <button class="start-btn" id="start-button" aria-haspopup="true" aria-expanded="false" aria-label="Start Menu Button">
+                <span class="start-logo" aria-hidden="true">🪟</span> Start
+            </button>
+            <div class="system-tray">
+                <div id="clock" aria-live="polite" aria-label="Current time">12:00 PM</div>
+            </div>
+        </footer>
+    <script src="script.js"></script>
+</body>
+</html>
